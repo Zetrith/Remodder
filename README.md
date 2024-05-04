@@ -17,6 +17,38 @@ especially those using the [Harmony](https://github.com/pardeike/Harmony) runtim
 A tool for previewing the effects of Harmony transpilers right in the IDE.
 The preview is a window showing the diff between the decompiled original method and the original with the transpiler applied.
 
+Example transpiler:
+```cs
+[HarmonyPatch(typeof(ExampleClass), nameof(OriginalMethod))]
+public static class ExampleClass
+{
+    public static int OriginalMethod(string s)
+    {
+        return 90 + s.Length;
+    }
+
+    public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insts)
+    {
+        yield return new CodeInstruction(OpCodes.Ldstr, "Hello World");
+        yield return new CodeInstruction(
+            OpCodes.Call, 
+            AccessTools.Method(typeof(Console), nameof(Console.WriteLine), [typeof(string)])
+        );
+        
+        foreach (var inst in insts)
+        {
+            if (inst.OperandIs(90))
+                inst.operand = 42;
+
+            yield return inst;
+        }
+    }
+}
+```
+
+Resulting diff:
+
+
 It works by querying the IDE for relevant referenced assemblies, 
 temporarily loading them together with the project's compiled assembly 
 and running the transpiler under the cursor in this context.
@@ -25,7 +57,7 @@ When you request a preview, the plugin executes the code of the project you are 
 **Keep the possible security problems in mind when interacting with projects you don't trust.**
 
 Current limitations:
-- Only works on Harmony's class-with-attributes patches (like the one in the screenshot above)
+- Only works on Harmony's class-with-attributes patches (like the one above)
 - Patches with `TargetMethods` are not supported
 
 Good to know:
