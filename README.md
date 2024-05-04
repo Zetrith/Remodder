@@ -6,7 +6,7 @@ WIP Rider plugin providing quality-of-life tools for modders of .NET games,
 especially those using the [Harmony](https://github.com/pardeike/Harmony) runtime detour library.
 
 ## Features
-- Transpiler Preview
+- [Transpiler Preview](#transpiler-preview)
 
 ### Planned features
 - Dropdowns for looking up and selecting reflection members in Harmony APIs (e.g. selecting the target of a `[HarmonyPatch]`)
@@ -48,10 +48,15 @@ public static class ExampleClass
 
 Resulting diff:
 
+<img src="https://github.com/Zetrith/Remodder/blob/main/TranspilerPreviewScreenhot.png?raw=true" width="800"  alt="Transpiler Preview diff screenshot"/>
 
 It works by querying the IDE for relevant referenced assemblies, 
 temporarily loading them together with the project's compiled assembly 
 and running the transpiler under the cursor in this context.
+
+*User assemblies* is a list of assemblies to load which take precedence during transpiler execution and decompiling.
+If you are compiling your project against reference assemblies (without method bodies),
+you can use it to provide the original game assemblies to Remodder.
 
 When you request a preview, the plugin executes the code of the project you are working on locally.
 **Keep the possible security problems in mind when interacting with projects you don't trust.**
