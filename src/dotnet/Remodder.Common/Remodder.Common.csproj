@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>Remodder.Common</AssemblyName>
+        <LangVersion>12</LangVersion>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AsmResolver" Version="5.5.1" />
+        <PackageReference Include="AsmResolver.DotNet" Version="5.5.1" />
+        <PackageReference Include="Lib.Harmony" Version="2.3.3" />
+        <PackageReference Include="ICSharpCode.Decompiler" Version="8.2.0.7535" />
+        
+        <PackageReference Include="Krafs.Publicizer" Version="2.0.1" />
+        <Publicize Include="0Harmony;" />
+    </ItemGroup>
+
+</Project>
