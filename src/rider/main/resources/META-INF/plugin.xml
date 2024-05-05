@@ -1,8 +1,8 @@
 <idea-plugin require-restart="true">
-  <id>com.jetbrains.rider.plugins.remodder</id>
+  <id>com.zetrith.remodder</id>
   <name>Remodder</name>
   <version>_PLACEHOLDER_</version>
-  <vendor url="https://project-url">Zetrith</vendor>
+  <vendor url="https://github.com/Zetrith/Remodder">Zetrith</vendor>
   <idea-version since-build="_PLACEHOLDER_" until-build="_PLACEHOLDER_" />
   <depends>com.intellij.modules.rider</depends>
 

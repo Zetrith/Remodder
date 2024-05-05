@@ -1,6 +1,6 @@
 # Remodder
 
-[![Rider](https://img.shields.io/jetbrains/plugin/v/RIDER_PLUGIN_ID.svg?label=Rider&colorB=0A7BBB&style=for-the-badge&logo=rider)](https://plugins.jetbrains.com/plugin/RIDER_PLUGIN_ID)
+[![Rider](https://img.shields.io/jetbrains/plugin/v/24343.svg?label=Rider&colorB=0A7BBB&style=for-the-badge&logo=rider)](https://plugins.jetbrains.com/plugin/24343)
 
 WIP Rider plugin providing quality-of-life tools for modders of .NET games,
 especially those using the [Harmony](https://github.com/pardeike/Harmony) runtime detour library.
@@ -15,7 +15,8 @@ especially those using the [Harmony](https://github.com/pardeike/Harmony) runtim
 
 ### Transpiler Preview
 A tool for previewing the effects of Harmony transpilers right in the IDE.
-The preview is a window showing the diff between the decompiled original method and the original with the transpiler applied.
+The preview is a window showing the diff between the decompiled original method 
+and the original after applying the transpiler under the mouse cursor.
 
 Example transpiler:
 ```cs
