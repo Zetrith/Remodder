@@ -1,6 +1,7 @@
 # Remodder
 
 [![Rider](https://img.shields.io/jetbrains/plugin/v/24343.svg?label=Rider&colorB=0A7BBB&style=for-the-badge&logo=rider)](https://plugins.jetbrains.com/plugin/24343)
+[![Patreon](https://img.shields.io/badge/Patreon-Support%20the%20project-ff5441?style=for-the-badge&logo=patreon)](https://www.patreon.com/zetrith)
 
 WIP Rider plugin providing quality-of-life tools for modders of .NET games,
 especially those using the [Harmony](https://github.com/pardeike/Harmony) runtime detour library.
@@ -78,3 +79,6 @@ there's enough interest.
 
 Rider is paid software but free licences for all of JetBrains' software
 are available for [students](https://www.jetbrains.com/community/education/#students) and [open-source contributors](https://www.jetbrains.com/community/opensource/?var=1).
+
+## Support
+You can support my work by becoming a Patron at https://www.patreon.com/zetrith
